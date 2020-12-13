@@ -19,43 +19,43 @@ tested on ubuntu 18.04LTS
     sudo apt-get install -y xautomation
     ```
 
-# Traing learner
-    first need to change configureation of game environment
-    ```
-    # start torcs env
-    sudo torcs -vision
-    ```
-    1. go to race configuration and select racing track and set the driver `scr_server 1`
-        - `race -> practice -> configure race -> select racing track -> select driver`
-    2. go to display setup, select `64x64` RGB observation and `16` color depth
-        - `options -> Display`
+# Training Learner
+first need to change configureation of game environment
+```
+# start torcs env
+sudo torcs -vision
+```
+1. go to race configuration and select racing track and set the driver `scr_server 1`
+    - `race -> practice -> configure race -> select racing track -> select driver`
+2. go to display setup, select `64x64` RGB observation and `16` color depth
+    - `options -> Display`
 
-    start training!
-    ```
-    python train.py
-    ```
+start training!
+```
+python train.py
+```
 # Structure
-    ```
-    DAgger_example
-    ├── README.md
-    ├── train.py
-    │     train agent with DAgger algorithm
-    │
-    ├── agent.py 
-    │     neural network architecture of learner
-    │
-    ├── snakeoil3_gym.py
-    │     Torcs client communicate with Torcs game server
-    │ 
-    ├── gym_torcs.py
-    │     make Torcs client gym environment
-    │
-    ├── autostart.sh
-    │     key automation
-    │
-    ├── vtorcs-RL-color
-    │    Torcs source, copied from https://github.com/ugo-nama-kun/gym_torcs
-    │
-    ├── images
-          sampled images
-    ```
+```
+DAgger_example
+├── README.md
+├── train.py
+│     train agent with DAgger algorithm
+│
+├── agent.py 
+│     neural network architecture of learner
+│
+├── snakeoil3_gym.py
+│     Torcs client communicate with Torcs game server
+│ 
+├── gym_torcs.py
+│     make Torcs client gym environment
+│
+├── autostart.sh
+│     key automation
+│
+├── vtorcs-RL-color
+│    Torcs source, copied from https://github.com/ugo-nama-kun/gym_torcs
+│
+├── images
+        sampled images
+```
